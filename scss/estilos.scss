@@ -1,0 +1,84 @@
+// ESTILOS de la página INDEX en el ARCHIVO css/estilos.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+@import "css/estilosProductos.css";
+@import "css/estilosServicios.css";
+@import "css/estilosFaq.css";
+@import "css/estilosContacto.css";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Fredoka', sans-serif;
+    font-size:1rem;
+    min-height: 150%;
+    background:-moz-radial-gradient(center, circle,#483D8B, white);
+    background:-webkit-radial-gradient(center, circle, #483D8B, white);
+    background:-ms-radial-gradient(center, circle, #483D8B, white);
+    background:-o-radial-gradient(center, circle, #483D8B, white);
+    background-repeat: repeat;
+}
+
+// importar archivos principales
+@import "header";
+@import "navbar";
+@import "main";
+@import "main1";
+@import "main2";
+@import "main3";
+@import "footer";
+
+.grid-container > *{
+    // box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    width: 85%;
+    margin:0 auto;
+    padding: 2px;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.grid-container{
+    display: grid;
+    gap:10px;
+    grid-template-areas:
+            "header"
+            "navbar"
+            "main"
+            "main1"
+            "main2"
+            "main3"
+            "footer";
+}
+
+@mixin medias($ai:none,$jc:none){
+    .grid-container{
+        grid-template:
+        "header header header header header" 50px
+        "navbar navbar navbar navbar navbar" 50px
+        "main   main   main   main   main"   auto
+        "main1  main1  main1  main1  main1"  auto
+        "main2  main2  main2  main2  main2"  40px
+        "main3  main3  main3  main3  main3"  auto
+        "footer footer footer footer footer" 50px /
+        auto auto auto auto auto;
+        align-items: $ai;
+    justify-content:$jc;
+    }
+}
+@media (min-width: 600px){
+   @include medias;
+}
+
+@media (min-width:900px){
+    @include medias(center,space-evenly);
+}

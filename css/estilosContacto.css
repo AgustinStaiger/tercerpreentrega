@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  min-height: 100%;
+  background: -moz-radial-gradient(center, circle, #483D8B, white);
+  background: -webkit-radial-gradient(center, circle, #483D8B, white);
+  background: -ms-radial-gradient(center, circle, #483D8B, white);
+  background: -o-radial-gradient(center, circle, #483D8B, white);
+  background-repeat: repeat; }
+
+.header {
+  grid-area: header;
+  display: grid;
+  background: -moz-radial-gradient(center, circle, gray, black);
+  background: -webkit-radial-gradient(center, circle, gray, black);
+  background: -ms-radial-gradient(center, circle, gray, black);
+  background: -o-radial-gradient(center, circle, gray, black); }
+  .header h1 {
+    color: white;
+    font-size: 2em; }
+
+.navbar {
+  grid-area: navbar;
+  background: -moz-radial-gradient(top, circle, black, gray);
+  background: -webkit-radial-gradient(top, circle, black, gray);
+  background: -ms-radial-gradient(top, circle, black, gray);
+  background: -o-radial-gradient(top, circle, black, gray);
+  word-spacing: 5em;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  line-height: 50px; }
+  .navbar a {
+    color: white;
+    font-size: 1.2em; }
+  .navbar li {
+    display: inline; }
+
+.mainCon {
+  grid-area: mainCon;
+  display: grid;
+  align-items: center;
+  justify-content: center; }
+  .mainCon img {
+    width: 100%;
+    height: 80%;
+    margin: auto 10px;
+    border-radius: 0px 50px 0px 50px; }
+
+.main1Con {
+  grid-area: main1Con;
+  display: grid;
+  align-items: center;
+  justify-content: center; }
+  .main1Con h1 {
+    width: 100%;
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase; }
+
+.main2Con {
+  grid-area: main2Con;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: minmax(450px, auto);
+  align-items: flex-start;
+  justify-content: flex-start; }
+  .main2Con .nombre, .main2Con .apellido, .main2Con .telefono, .main2Con .email {
+    width: 100%;
+    margin: 5% 0;
+    padding: 2%; }
+  .main2Con .contenedor {
+    width: 200%;
+    margin: 5% 0;
+    padding: 30%; }
+  .main2Con .enviar {
+    margin: 2% 170%;
+    cursor: pointer; }
+
+.footer {
+  grid-area: footer;
+  background-color: darkblue;
+  font-size: 1.5em;
+  color: white;
+  line-height: 50px;
+  background: -moz-radial-gradient(center, circle, gray, black);
+  background: -webkit-radial-gradient(center, circle, gray, black);
+  background: -ms-radial-gradient(center, circle, gray, black);
+  background: -o-radial-gradient(center, circle, gray, black); }
+
+.grid-container > * {
+  border-radius: 30px;
+  padding: 2px;
+  text-align: center; }
+
+.grid-container {
+  width: 85%;
+  display: grid;
+  gap: 15px;
+  margin: 0 auto;
+  grid-template-areas: "header" "navbar" "mainCon" "main1Con" "main2Con" "footer"; }
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template: "header header header header header" 50px "navbar navbar navbar navbar navbar" 50px "mainCon mainCon mainCon mainCon mainCon" auto "main1Con main1Con main1Con main1Con main1Con" auto "main2Con main2Con main2Con main2Con main2Con" auto "footer footer footer footer footer" 50px / auto auto auto auto auto; } }
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template: "header header header header header" 50px "navbar navbar navbar navbar navbar" 50px "mainCon mainCon mainCon mainCon mainCon" auto "main1Con main1Con main1Con main1Con main1Con" auto "main2Con main2Con main2Con main2Con main2Con" auto "footer footer footer footer footer" 50px / auto auto auto auto auto; } }
+
+/*# sourceMappingURL=estilosContacto.css.map */

@@ -1,0 +1,73 @@
+// ESTILOS de la página PRODUCTOS en el ARCHIVO css/estilosProductos.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Fredoka', sans-serif;
+    font-size:1rem;
+    min-height: 100%;
+    background:-moz-radial-gradient(center, circle,#483D8B, white);
+    background:-webkit-radial-gradient(center, circle, #483D8B, white);
+    background:-ms-radial-gradient(center, circle, #483D8B, white);
+    background:-o-radial-gradient(center, circle, #483D8B, white);
+    background-repeat: repeat;
+}
+
+
+@import "header";
+@import "navbar";
+@import "main";
+@import "main1pro";
+@import "main2pro";
+@import "footer";
+
+
+.grid-container > *{
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 2px;
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    gap:15px;
+    grid-template-areas:
+            "header"
+            "navbar"
+            "main"
+            "main1"
+            "main2"
+            "footer";
+}
+@mixin medias{
+    .grid-container{
+        grid-template:
+        "header header header header" 50px
+        "navbar navbar navbar navbar" 50px
+        "main   main   main   main "  100px
+        "main1  main1  main1  main1"  50px
+        "main2  main2  main2  main2"  800px
+        "footer footer footer footer" 50px /
+        auto auto auto auto ;
+    } 
+}
+@media (min-width: 600px){
+    @include medias;
+}
+
+@media (min-width:900px){
+    @include medias;
+}

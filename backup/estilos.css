@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Fredoka', sans-serif;
+    font-size:1rem;
+    min-height: 150%;
+}
+
+.header{
+    grid-area: header;
+    background-color:darkblue;
+    color:white;
+    font-size: 1.2em;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: #2F4F4F;
+    
+    word-spacing: 5em;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    line-height: 50px;
+    
+}
+a{
+    color:white;
+    font-size: 1.2em;
+}
+
+li{
+    display: inline;
+}
+
+.main{
+    grid-area: main;  
+    background-color: #fdcfcf;
+    display:grid; 
+    align-items: center;
+    justify-content:center; 
+ }  
+
+.main img{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    max-width: 1030px;
+    margin: 0 auto;
+    border-radius: 0px 50px 0px 50px;
+}
+.main1{
+    grid-area: main1;
+    background-color: #fdcfcf;
+    display:grid;
+    align-items: center;
+    justify-content:center; 
+}
+
+.main1 img{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    max-width: 1400px;
+    margin: 0 auto; 
+    border-radius: 0px 50px 0px 50px;
+}
+.main2{
+    grid-area: main2;
+    background-color:#006400;
+}
+
+.titulos{
+    font-size: 1.5em;
+    color:white;
+    font-family: 'Fredoka', sans-serif;
+
+}
+
+.main3{
+    grid-area: main3;
+    background-color:#98FB98;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-rows: minmax(350px,auto);
+    align-items: center;
+    justify-content:space-evenly; 
+}
+
+.main3 img{
+    
+    border-radius: 30px 0px 30px 0px;
+    -moz-transition:-moz-transform 0.3s ease-in-out 0.1s;
+	-webkit-transition:-webkit-transform 0.3s ease-in-out 0.1s;
+	-ms-transition:-ms-transform 0.3s ease-in-out 0.1s;
+	-o-transition:-o-transform 0.3s ease-in-out 0.1s;
+}
+
+
+.img:hover{
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+
+.footer{
+    grid-area: footer;
+    background-color:darkblue;
+    font-size: 1.5em;
+    color:white;
+    line-height: 50px;
+}
+
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 30px;
+    padding: 2px;
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    gap:10px;
+    grid-template-areas:
+            "header"
+            "navbar"
+            "main"
+            "main1"
+            "main2"
+            "main3"
+            "footer";
+}
+
+@media (min-width: 600px){
+    .grid-container{
+        /* grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px; */
+        /* grid-template-areas:
+            "header header"
+            "navbar navbar"    "header header header" 50px
+        "navbar navbar navbar" 40px
+        "main   main main"  auto
+        "main1   main1 main1"  40px
+        "main2   main2 main2"  auto
+        "footer footer footer" 30px /
+        auto;*/
+    
+
+    grid-template:
+        "header header header header header" 50px
+        "navbar navbar navbar navbar navbar" 50px
+        "main   main   main   main   main"   auto
+        "main1  main1  main1  main1  main1"  auto
+        "main2  main2  main2  main2  main2"  40px
+        "main3  main3  main3  main3  main3"  auto
+        "footer footer footer footer footer" 50px /
+        auto auto auto auto auto;
+    } 
+}
+
+@media (min-width:900px){
+    .grid-container{
+        grid-template:
+        "header header header header header" 50px
+        "navbar navbar navbar navbar navbar" 50px
+        "main   main   main   main   main"   auto
+        "main1  main1  main1  main1  main1"  auto
+        "main2  main2  main2  main2  main2"  40px
+        "main3  main3  main3  main3  main3"  auto
+        "footer footer footer footer footer" 50px /
+        auto auto auto auto auto;
+    }
+}

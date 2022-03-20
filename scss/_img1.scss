@@ -1,0 +1,10 @@
+.img1{
+    grid-area: img1;
+    display: grid;
+    .i1{
+        border-radius: 30px;
+        padding: 2px;
+        align-items: center;
+        justify-content:center;
+    }
+}

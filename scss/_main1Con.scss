@@ -1,0 +1,12 @@
+.main1Con{
+    grid-area: main1Con;
+    display:grid;
+    align-items:center;
+    justify-content: center;
+    h1{
+        width: 100%;
+        font-size: 2em;
+        color:white;
+        text-transform: uppercase;
+    }
+}

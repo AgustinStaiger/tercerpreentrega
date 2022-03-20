@@ -1,0 +1,12 @@
+.mainSer{
+    grid-area: mainSer;
+    h1{
+        width: 100%;
+        font-size: 2em;
+        color:white;
+        background:-moz-radial-gradient(center, circle,#483D8B, white);
+        background:-webkit-radial-gradient(center, circle, #483D8B, white);
+        background:-ms-radial-gradient(center, circle, #483D8B, white);
+        background:-o-radial-gradient(center, circle, #483D8B, white);
+    }
+}

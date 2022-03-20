@@ -1,0 +1,10 @@
+.main2{
+    grid-area: main2;
+    background:-moz-radial-gradient(center, circle,gray, black);
+    background:-webkit-radial-gradient(center, circle, gray, black);
+    background:-ms-radial-gradient(center, circle, gray, black);
+    background:-o-radial-gradient(center, circle,gray,black);
+    .tit{
+        color:white;
+    }
+}

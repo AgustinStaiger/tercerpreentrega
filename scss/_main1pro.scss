@@ -1,0 +1,15 @@
+.main1{
+    grid-area: main1;
+    width: 100%;
+    display:grid;
+    align-items: center;
+    justify-content:center; 
+    h1{
+       
+        color:black;
+        background: -moz-linear-gradient(top, #D8BFD8, white);
+        background: -webkit-linear-gradient(top, #D8BFD8, white);
+        background: -ms-linear-gradient(top, #D8BFD8, white);
+        background: -o-linear-gradient(top,#D8BFD8, white);
+    }
+}

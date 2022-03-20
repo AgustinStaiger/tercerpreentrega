@@ -1,0 +1,72 @@
+// ESTILOS de la página CONTACTO en el ARCHIVO css/estilosContacto.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Fredoka', sans-serif;
+    font-size:1rem;
+    min-height: 100%;
+    background:-moz-radial-gradient(center, circle,#483D8B, white);
+    background:-webkit-radial-gradient(center, circle, #483D8B, white);
+    background:-ms-radial-gradient(center, circle, #483D8B, white);
+    background:-o-radial-gradient(center, circle, #483D8B, white);
+    background-repeat: repeat;
+}
+
+@import "header";
+@import "navbar";
+@import "mainCon";
+@import "main1Con";
+@import "main2Con";
+@import "footer";
+
+.grid-container > *{
+    border-radius: 30px;
+    padding: 2px;
+    text-align: center;
+}
+
+.grid-container{
+    width: 85%;
+    display: grid;
+    gap:15px;
+    margin: 0 auto;
+    grid-template-areas:
+            "header"
+            "navbar"
+            "mainCon"
+            "main1Con"
+            "main2Con"
+            "footer";
+}
+
+@mixin medias{
+    .grid-container{
+        grid-template:
+        "header header header header header" 50px
+        "navbar navbar navbar navbar navbar" 50px
+        "mainCon mainCon mainCon mainCon mainCon" auto 
+        "main1Con main1Con main1Con main1Con main1Con" auto
+        "main2Con main2Con main2Con main2Con main2Con" auto
+        "footer footer footer footer footer" 50px /
+        auto auto auto auto auto;
+    }
+}
+@media (min-width: 600px){
+    @include medias;
+}
+
+@media (min-width:900px){
+    @include medias;
+}
